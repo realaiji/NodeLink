@@ -1,0 +1,31 @@
+<ol class="breadcrumb">
+  <li><a href="#/">Home</a></li>
+  <li class="active">Dashboard</li>
+</ol>
+
+<div class="well well-sm">
+  <form action="" class="form-inline">
+    <label for="">วันที่รับบริการ</label>
+    <input type="date" class="form-control" ng-model="date">
+    <button type="button" class="btn btn-primary" ng-click="getList()">แสดง</button>
+  </form>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>HN</th>
+      <th>ชื่อ - สกุล</th>
+      <th>สิทธิการรักษา</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="p in person">
+      <td>{{ $index+1 }}</td>
+      <td>{{ p.product_id }}</td>
+      <td>{{ p.product_name }}</td>
+      <td>{{ p.product_type_name }}</td>
+    </tr>
+  </tbody>
+</table>

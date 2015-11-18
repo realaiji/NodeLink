@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <meta charset="utf-8">
+  <title>Hello World!</title>
+
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="./app.js"></script>
+  <script src="./MainCtrl.js"></script>
+  <script src="./SettingsCtrl.js"></script>
+  <script src="./MainService.js"></script>
+</head>
+
+<body>
+  <br>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="list-group">
+          <a href="#" class="list-group-item active">
+            Menu
+          </a>
+          <a href="#/" class="list-group-item">รายชื่อผู้ป่วยอุบัติเหตุ</a>
+          <a ui-sref="settings" class="list-group-item">กำหนดค่าการเชื่อมต่อ</a>
+        </div>
+      </div>
+      <div class="col-md-9" ui-view>
+
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
